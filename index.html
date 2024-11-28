@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@700&display=swap" rel="stylesheet">
+    <title>Please Accept</title>
+    <script src="https://js.cx/libs/animate.js"></script>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@700&family=Ga+Maamli&display=swap');
+    </style>
+  <body>
+    
+    <div class="app">
+      <h1> Will you love me forever????
+      </h1>
+
+      <div class="buttonGroup">
+        <button class="button--yes" type="button" onclick="myMsg()">Yesssss</button>
+        <button class="button--no" type="button" onclick="noMsg()">Noooo</button>
+      </div>
+    </div>
+        <div class="heart">
+    </div> 
+    <div class="heart1">
+    </div>
+    <audio autoplay loop>
+      <source src="iwannabeyours.mp3" type="audio/mpeg">
+    </audio>
+    <textarea id="textExample" rows="5" cols="60">Hiiiii shruti my love i want to tell you that i am madly in love with you and i will love you endlessly forever and ever. You mean the world to me and your beauty is breathtaking. My heart skips a beat when i see you i feel safe and i forget all my problems. You beauty is so facinating i just get lost in you when is see you, jaab mai tumko dekhata hu i just start blushing like and idiot. You are solution of all my problems you are cure of all my pain i love you so much. I dont know how to thank you but my Shruti whenever you need me i am always there for you and if with your permission i will be the best and most loving partner my babygirl. You are my baby queen and i can do anything for you my love i am sorry if i am being too much or something. Huge apologizy for this my baby. You are the first and last thing that comes to mind and you are the thing which come to my dream also i love you my babyqueen.Please never leave me my shruti i love you so much and i am ready to loose anything but not you.i want to sleep after you sleep so that i make sure that my princess is sleeping properly so then i can sleep peacefully. I want to take care of you and give you princess treatment so that you smile because i love your cute beautiful smile. I LOVE YOU MY SHRUTI BABY
+    </textarea>
+    <!-- <button class=" readbutton" onclick="animateText(textExample)">Please click here my love</button> -->
+
+
+     <script>
+      const b = document.querySelector("button.button--no");
+      b.addEventListener("mouseover", mouseHover);
+      function myMsg() {
+        alert("Thank you so much baby. I swear i will also love you forever and give my life to keep you happy always");
+
+      }
+      function noMsg(){
+        alert("SAD :(")
+      }
+      function mouseHover() {
+        const j = Math.floor(Math.random() * 600) + 1;
+        const i = Math.floor(Math.random() * 900) + 10;
+        
+        b.style.left = i + "px";
+        b.style.bottom = j + "px";
+      }
+
+      function animateText(textArea) {
+        let text = textArea.value;
+        let to = text.length,
+          from = 0;
+  
+        animate({
+          duration: 10000,
+          timing: bounce,
+          draw: function(progress) {
+            let result = (to - from) * progress + from;
+            textArea.value = text.slice(0, Math.ceil(result))
+          }
+        });
+      }
+  
+  
+      function bounce(timeFraction) {
+        for (let a = 0, b = 1; 1; a += b, b /= 2) {
+          if (timeFraction >= (7 - 4 * a) / 11) {
+            return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+          }
+        }
+      }window.addEventListener("load", function() {
+        animateText(document.getElementById("textExample"));
+      });
+    </script>
+  </body>
+</html>
